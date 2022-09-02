@@ -57,6 +57,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# to fix 403 csrf forbidden error on logging into admin
+CSRF_TRUSTED_ORIGINS = ['https://fly-django.fly.dev']
+
 ROOT_URLCONF = 'fly_django.urls'
 
 HELLO_WORLD_TEMPLATE_DIR = os.path.join(BASE_DIR, 'hello_world')
