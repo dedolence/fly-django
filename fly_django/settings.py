@@ -145,10 +145,12 @@ AWS_LOCATION = 'static'
 AWS_DEFAULT_ACL = None
 
 # Django settings
+# STATIC_URL = 'fly-django.s3.us-east-1.amazonaws.com/static/'
 STATIC_URL = '{domain}/{location}/'.format(
     domain=AWS_S3_CUSTOM_DOMAIN,
     location=AWS_LOCATION
 )
+# STATICFILES_DIRS = ['/home/dedolence/Documents/projects/fly-django/static']
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
